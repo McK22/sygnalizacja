@@ -1,7 +1,5 @@
 package sygnalizacja.symulator;
 
-import sygnalizacja.controller.Main;
-
 import java.util.LinkedList;
 
 import static sygnalizacja.symulator.LightColor.*;
@@ -21,17 +19,6 @@ public class TrafficLight {
     private int totalWaitingTime = 0;
     private int totalCars = 0;
     private double lastSpawnTime = 0;
-
-    public TrafficLight(int id, int greenLength, int redLength, int carsInHour, TrafficLight next){
-        this.id = id;
-        this.greenLength = greenLength;
-        this.redLength = redLength;
-        spawnInterval = 3600.0 / carsInHour;
-        line = new LinkedList<>();
-        lightColor = GREEN;
-        secondsToLightSwitch = greenLength;
-        this.next = next;
-    }
 
     public TrafficLight(int id, int greenLength, int redLength, int carsInHour){
         this.id = id;
